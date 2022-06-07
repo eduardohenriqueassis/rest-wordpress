@@ -1,0 +1,46 @@
+1 - Copiar a pasta do site para o wp-content/themes/
+
+2 - Mudar o index.html para index.php
+
+3 - colocar o arquivo style.css no diretório raiz do tema, e ele tem que se chamar style.
+
+4 - Adicionar a descrição do site como comentário no início do arquivo style.
+
+/*
+Theme Name: Origamid
+Theme URI: http://wordpress.org/themes/origamid.com
+Author: Eduardo
+Author URI: http://origamid.com/
+Description: Tema criado pelo curso de Wordpress da Origamid.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+info: https://codex.wordpress.org/Theme_Development
+
+5 - Ativar o tema no wordpress
+
+6 - corrigir o caminho do style no index.php e outros caminhos, se necessário.
+<?php echo get_stylesheet_directory_uri(); ?>
+Esta é uma função php que vai até a raiz do wordpress.
+
+7 - separar o header e o footer.
+Adicionar antes de fechar o head: <?php wp_head() ?>
+Adicioar antes de fechar o body <?php wp_footer() ?>
+Acidionar o header e o footer nas páginas do site e mudá-las para .php
+Com <?php get_header(); ?> e <?php get_footer(); ?>
+
+8 - Começar a substituir o conteúdo por funções.
+<?php bloginfo( 'name'); ?>
+
+9 - Adicionar as páginas de interface do wordpress.
+
+10 - Transformar as páginas em HTML, em templates de páginas.
+A página index.php deve estar reservada para um conteúdo genérico.
+Adicionar o nome page- na frente de onde cada template de página para facilitar a organização.
+<?php 
+// template name: Sobre
+?>
+
+
