@@ -7,6 +7,9 @@ O wordpress, tem como base o PHP e nos permite construir funcionalidades de admi
 
 ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white)
 
+
+O download deve ser feito dentro do diretório do seu servidor. No caso eu uso o wampserver. Crie uma pasta rest-wordpress dentro do diretório c://wamp/www/
+
 --------
 
 # Rest Restaurant
