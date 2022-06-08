@@ -43,4 +43,9 @@ Adicionar o nome page- na frente de onde cada template de página para facilitar
 // template name: Sobre
 ?>
 
+11 - Adicionar o loop
+O loop é responsável por ler o banco de dados e atualizar o site ou blog.
+
+
+
 
