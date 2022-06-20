@@ -2,8 +2,8 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
-		<title><?php bloginfo( 'name'); ?></title>
-
+		<title><?php bloginfo( 'name'); ?> | <?php wp_title('') ?><?php the_field('title_seo'); ?></title>
+		<meta name="description" content="<?php bloginfo('name') ?> | <?php wp_title('') ?><?php the_field('description_seo');?>" >
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+SC' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css">
 
@@ -16,16 +16,22 @@
 		
 		<header>
 			<nav>
-				<ul>
-					<li class="current_page_item"><a href="/origamid/">Menu</a></li>
-					<li><a href="/origamid/sobre">Sobre</a></li>
-					<li><a href="/origamid/contato">Contato</a></li>
-				</ul>
+				<?php
+					$args = array (
+						'menu' => 'principal',
+						'container' => false
+					);
+					wp_nav_menu( $args )
+				?>
 			</nav>
 
 			<h1><img src="<?php echo get_stylesheet_directory_uri() ?>/img/rest.png" alt="Rest"></h1>
 
-			<p>Rua Marechal 29 – Copacabana – Rj</p>
-			<p class="telefone">2422-9201</p>
+			<!-- Variável que pega as informações da página de contato. -->
+			<?php $contato = get_page_by_title('contato'); ?>
+			<p><?php the_field('endereco_header', $contato); ?></p>
+			<p class="telefone"><?php the_field('telefone_header', $contato); ?></p>
 		</header>
     
+		<!--  -->
+		<!--  -->

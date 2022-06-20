@@ -648,25 +648,25 @@ section.container {
 	margin-bottom: 40px;
 }
 
-.menu-item {
+.menu-prato {
 	text-align: right;
 	margin-bottom: 20px;
 }
 
-.menu-item h2 {
+.menu-prato h2 {
 	font-size: 2.25em;
 	color: #f17060;
 	padding: 0px 100px 10px 0;
 	border-bottom: 1px dashed #373532;
 }
 
-.menu-item h3 {
+.menu-prato h3 {
 	font-size: 1.125em;
 	color: #fff;
 	margin-bottom: 5px;
 }
 
-.menu-item p {
+.menu-prato p {
 	font-family: georgia;
 	font-style: italic;
 	font-size: 0.875em;
@@ -674,23 +674,23 @@ section.container {
 	color: #787367;
 }
 
-.menu-item li {
+.menu-prato li {
 	clear: both;
 	padding: 15px 0;
 	border-bottom: 1px dashed #373532;
 	overflow: hidden;
 }
 
-.menu-item li:hover {
+.menu-prato li:hover {
 	background-color: #131313;
 }
 
-.menu-item div {
+.menu-prato div {
 	float: right;
 	max-width: 290px;
 }
 
-.menu-item span {
+.menu-prato span {
 	font-size: 1.5em;
 	display: block;
 	float: right;
@@ -786,14 +786,14 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-.menu-item {
+.menu-prato {
 	text-align: center;
 }
-.menu-item span {
+.menu-prato span {
 	float: none;
 	margin: 0 auto;
 }
-.menu-item h2 {
+.menu-prato h2 {
 	padding: 20px 0px 10px 0;
 }
 

@@ -46,6 +46,31 @@ Adicionar o nome page- na frente de onde cada template de página para facilitar
 11 - Adicionar o loop
 O loop é responsável por ler o banco de dados e atualizar o site ou blog.
 
+12 - Advanced custom fields.
+<?php the_field('nome_conteudo'); ?>
+
+13 - repeater fields
+
+<?php if( have_rows('conteudo_sobre') ): while(have_rows('conteudo_sobre')) : the_row(); ?>
+ 	<h2><?php the_sub_field('titulo_sobre'); ?></h2>
+		<?php the_sub_field('texto_sobre'); ?>
+<?php endwhile; else : endif ?>
+
+
+14 - Pegar valores de outras páginas.
+<?php $contato = get_page_by_tittle('contato);
+the_field('telefone', $contato)
+?>
+
+15 - Terminar de preencher os outros campos.
+
+16 - Adicionar campos para Sobre<title><?php bloginfo('name); ?> - <?php wp_title(') ?> <?php the_field('title_seo'); ?></ title>
+<meta name="description" content="<?php bloginfo('name') ?> - <?php wp_title('') ?> <?php the_field('description_seo');"?>
+
+17 - Adicionar functions e menus.
+
+// Habilitar menu:
+ add_theme_support('menus');
 
 
 
